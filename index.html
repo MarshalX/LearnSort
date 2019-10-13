@@ -437,11 +437,75 @@
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="implementation-bubblesort" role="tabpanel">6</div>
-                <div class="tab-pane fade" id="implementation-selectionsort" role="tabpanel">7</div>
-                <div class="tab-pane fade" id="implementation-insertionsort" role="tabpanel">8</div>
-                <div class="tab-pane fade" id="implementation-mergesort" role="tabpanel">9</div>
-                <div class="tab-pane fade" id="implementation-quicksort" role="tabpanel">10</div>
+                <div class="tab-pane fade show active" id="implementation-bubblesort" role="tabpanel">
+                    <p>Реализация сортировки пузырьком на псевдокоде:</p>
+                    <script src="https://gist.github.com/MarshalX/bf0fac52977f38e8653cba4389e05914.js"></script>
+
+                    <p>Реализация сортировки пузырьком на C:</p>
+                    <script src="https://gist.github.com/MarshalX/e3708071b8d1a2a5ffba8f88b48851a9.js"></script>
+
+                    <h3>Примечание</h3>
+                    <p>Все приведённые реализации алгоритма имеют недостаток: каждый раз во внешнем цикле длина
+                        проходимого участка уменьшается на единицу, в то время как следующий проход должен идти до места
+                        последнего обмена.</p>
+
+                    <p>Источник: <a
+                            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C%D0%BA%D0%BE%D0%BC">Сортировка
+                        пузырьком — Википедия</a></p>
+                </div>
+                <div class="tab-pane fade" id="implementation-selectionsort" role="tabpanel">
+                    <p>Реализация сортировки выбором на C++:</p>
+                    <script src="https://gist.github.com/MarshalX/4b43c12b8aa6a70b87352a53b636077a.js"></script>
+
+                    <p>Реализация сортировки выбором на C#:</p>
+                    <script src="https://gist.github.com/MarshalX/42276a27ee32564c85e360eb83b3dfbe.js"></script>
+
+                    <p>Источник: <a
+                            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BE%D0%BC">Сортировка
+                        выбором — Википедия</a></p>
+                </div>
+                <div class="tab-pane fade" id="implementation-insertionsort" role="tabpanel">
+                    <h3>Псевдокод</h3>
+                    <p>На вход процедуре сортировки подаётся массив A[1..n], состоящий из элементов последовательности
+                        A[1], A[2], ..., A[n], которые требуется отсортировать. n соответствует A.length — размеру
+                        исходного массива. Для сортировки не требуется привлечения дополнительной памяти, кроме
+                        постоянной величины для одного элемента, так как выполняется перестановка в пределах массива. В
+                        результате работы процедуры во входном массиве оказывается требуемая выходная последовательность
+                        элементов.</p>
+
+                    <p>Реализация сортировки вставкой на псевдокоде:</p>
+                    <script src="https://gist.github.com/MarshalX/567e1921b7b85ef6773b7be82262be34.js"></script>
+                </div>
+                <div class="tab-pane fade" id="implementation-mergesort" role="tabpanel">
+                    <p>Реализация сортировки слиянием на псевдокоде:</p>
+                    <script src="https://gist.github.com/MarshalX/20eb3e23ba95a4439e5296bc422d6a08.js"></script>
+
+                    <p>Реализация сортировки слиянием на языке программирования Python:</p>
+                    <script src="https://gist.github.com/MarshalX/8f5cbfb99a3a2d17f7055ccd561d6fbc.js"></script>
+
+                    <p>Реализация сортировки слиянием на языке программирования Pascal:</p>
+                    <script src="https://gist.github.com/MarshalX/f4b9b3b59121a2c1d074f696fefa2422.js"></script>
+
+                    <p>Реализация сортировки слиянием на языке программирования C:</p>
+                    <script src="https://gist.github.com/MarshalX/0679e50e30706b0ded01b6d3d65ac449.js"></script>
+
+                    <p>Реализация сортировки слиянием на языке программирования C++ 11:</p>
+                    <script src="https://gist.github.com/MarshalX/aedd2f268a77ee76536b52a41fdc38d9.js"></script>
+
+                    <p>Источник реализации на псевдокоде, C, C++: <a
+                            href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5%D0%BC">Сортировка
+                        слиянием — Википедия</a></p>
+                </div>
+                <div class="tab-pane fade" id="implementation-quicksort" role="tabpanel">
+                    <p>Реализация быстрой сортировки на языке программирования Python:</p>
+                    <script src="https://gist.github.com/MarshalX/539fbd0c13ac5d9cc1521b304356e1bc.js"></script>
+
+                    <p>Реализация быстрой сортировки на языке программирования Pascal:</p>
+                    <script src="https://gist.github.com/MarshalX/c906c434f2f167b6f4fca2a50d2123c4.js"></script>
+
+                    <p>Реализация быстрой сортировки на языке программирования C#:</p>
+                    <script src="https://gist.github.com/MarshalX/7b2e84b570f50fb5a233715d7324d8b5.js"></script>
+                </div>
             </div>
         </div>
         <div class="tab-pane fade" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
