@@ -81,10 +81,11 @@
             <div class="tab-content" id="theoryTabContent">
                 <div class="tab-pane fade show active" id="theory-bubblesort" role="tabpanel">
                     <div class="text-center">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lyZQPjUT5B4"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.youtube-nocookie.com/embed/lyZQPjUT5B4?version=3&enablejsapi=1"
+                                    allowfullscreen></iframe>
+                        </div>
                     </div>
                     <h3>Сортировка пузырьком</h3>
                     <p><b>Сортировка простыми обменами</b>, <b>сортиро́вка пузырько́м</b> (<a
@@ -121,10 +122,11 @@
                 </div>
                 <div class="tab-pane fade" id="theory-selectionsort" role="tabpanel">
                     <div class="text-center">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ns4TPTC8whw"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.youtube-nocookie.com/embed/Ns4TPTC8whw?version=3&enablejsapi=1"
+                                    allowfullscreen></iframe>
+                        </div>
                     </div>
                     <h3>Сортировка выбором</h3>
                     <p><b>Сортировка выбором</b> (<i>Selection sort</i>)&nbsp;— <a
@@ -151,10 +153,11 @@
                 </div>
                 <div class="tab-pane fade" id="theory-insertionsort" role="tabpanel">
                     <div class="text-center">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ROalU379l3U"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.youtube-nocookie.com/embed/ROalU379l3U?version=3&enablejsapi=1"
+                                    allowfullscreen></iframe>
+                        </div>
                     </div>
                     <h3>Сортировка вставками</h3>
                     <p><b>Сортировка вставками</b> (<a
@@ -188,10 +191,11 @@
                 </div>
                 <div class="tab-pane fade" id="theory-mergesort" role="tabpanel">
                     <div class="text-center">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XaqR3G_NVoo"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.youtube-nocookie.com/embed/XaqR3G_NVoo?version=3&enablejsapi=1"
+                                    allowfullscreen></iframe>
+                        </div>
                     </div>
                     <h3>Сортировка слиянием</h3>
                     <p>Сортировка слиянием (англ. merge sort) — алгоритм сортировки, который упорядочивает списки (или
@@ -258,10 +262,11 @@
                 </div>
                 <div class="tab-pane fade" id="theory-quicksort" role="tabpanel">
                     <div class="text-center">
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ywWBy6J5gz8"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item"
+                                    src="https://www.youtube-nocookie.com/embed/ywWBy6J5gz8?version=3&enablejsapi=1"
+                                    allowfullscreen></iframe>
+                        </div>
                     </div>
                     <h3>Быстрая сортировка</h3>
                     <p><b>Быстрая сортировка</b>, <b>сортировка Хоара</b> (<a
@@ -604,6 +609,12 @@
 </div>
 
 <script>
+    $('a').on('show.bs.tab', (e) => {
+        $('.embed-responsive-item').each(function () {
+            $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        })
+    });
+
     $(function () {
         let aa = null;
         // Make the canvas fit the available space
