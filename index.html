@@ -537,6 +537,10 @@
                             <option value="reversed">Перевернутый</option>
                         </select>
                     </div>
+                    <div class="form-group mb-3">
+                        <label for="init-negative">Отрицательные числа</label>
+                        <input class="form-control mx-sm-3" type="checkbox" id="init-negative" aria-label="Checkbox for following text input">
+                    </div>
                     <div class="form-group mb-3" id="pivot-select-div">
                         <label for="pivot-select">Опорный элемент</label>
                         <select class="form-control mx-sm-3" id="pivot-select">
@@ -611,7 +615,11 @@
             const algo = $("#algo-select").val();
             const pivot_algo = sorting.is_pivot_algo(algo);
             $("#pivot-select").prop("disabled", !pivot_algo);
-            $("#pivot-select-div").toggleClass("hidden", !pivot_algo);
+            if (!pivot_algo) {
+                $("#pivot-select-div").hide()
+            } else {
+                $("#pivot-select-div").show()
+            }
         };
         update_pivot_select();
         $("#algo-select").change(update_pivot_select);
@@ -631,9 +639,10 @@
                 $("#array-size").val(n2);
                 n = n2;
             }
+            const negative = $("#init-negative").is(':checked');
             const ary = [];
-            for (var i = 0; i < n; i++) {
-                ary.push(Math.random() - 0.5);
+            for (let i = 0; i < n; i++) {
+                ary.push(Math.random() - (negative ? 0.5 : 0));
             }
             const init = $("#init-select").val();
             if (init === "sorted") {
