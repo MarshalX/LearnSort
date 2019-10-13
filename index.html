@@ -12,63 +12,163 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-3">
-            <div class="form-group">
-                <label for="array-size">Array Size</label>
-                <input id="array-size" class="form-control" type="number" value="50"/>
-            </div>
-            <div class="form-group">
-                <label for="algo-select">Algorithm</label>
-                <select class="form-control" id="algo-select">
-                    <option value="bubblesort">Bubble sort</option>
-                    <option value="selectionsort">Selection sort</option>
-                    <option value="insertionsort">Insertion sort</option>
-                    <option value="odd_even_sort">Odd-even sort</option>
-                    <option value="cocktail_sort">Cocktail sort</option>
-                    <option value="quicksort">Quicksort</option>
-                    <option value="heapsort">Heapsort</option>
-                    <option value="mergesort">Merge sort</option>
-                    <option value="bitonic_mergesort">Bitonic mergesort</option>
-                    <option value="introsort">Introsort</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="init-select">Initial array</label>
-                <select class="form-control" id="init-select">
-                    <option value="random">Random</option>
-                    <option value="sorted">Sorted</option>
-                    <option value="reversed">Reversed</option>
-                </select>
-            </div>
-            <div class="form-group" id="pivot-select-div">
-                <label for="pivot-select">Pivot choice</label>
-                <select class="form-control" id="pivot-select">
-                    <option value="random">Random</option>
-                    <option value="first">First</option>
-                    <option value="middle">Middle</option>
-                    <option value="last">Last</option>
-                    <option value="median3">Median of 3</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="interval">Interval (ms)</label>
-                <input id="interval" class="form-control" type="number" value="20"/>
-            </div>
-            <p class="text-muted">
-                Comparisons are <span class="compare">blue</span>,
-                <br>
-                swaps are <span class="swap">red</span>.
-            </p>
-            <div class="text-center">
-                <button class="btn btn-lg btn-primary" id="start-btn">Start</button>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <a class="navbar-brand" href="#">LearnSort</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-tab" data-toggle="tab" href="#theory" role="tab">Теория</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-tab" data-toggle="tab" href="#implementation" role="tab">Реализация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="visualization-tab" data-toggle="tab" href="#visualization" role="tab">Визуализация</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            home
+        </div>
+        <div class="tab-pane fade" id="theory" role="tabpanel" aria-labelledby="theory-tab">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-bubblesort-tab" data-toggle="tab" href="#theory-bubblesort"
+                       role="tab">Сортировка пузырьком</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-selectionsort-tab" data-toggle="tab" href="#theory-selectionsort"
+                       role="tab">Сортировка выбором</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-insertionsort-tab" data-toggle="tab" href="#theory-insertionsort"
+                       role="tab">Сортировка вставками</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-mergesort-tab" data-toggle="tab" href="#theory-mergesort" role="tab">Сортировка
+                        слиянием</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-quicksort-tab" data-toggle="tab" href="#theory-quicksort" role="tab">Быстрая
+                        сортировка</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" id="theory-bubblesort" role="tabpanel">1</div>
+                <div class="tab-pane fade" id="theory-selectionsort" role="tabpanel">2</div>
+                <div class="tab-pane fade" id="theory-insertionsort" role="tabpanel">3</div>
+                <div class="tab-pane fade" id="theory-mergesort" role="tabpanel">4</div>
+                <div class="tab-pane fade" id="theory-quicksort" role="tabpanel">5</div>
             </div>
         </div>
-        <div class="col-xs-9" id="canvas-div">
-            <canvas width="800px" height="600px" id="main-canvas" >
+        <div class="tab-pane fade" id="implementation" role="tabpanel" aria-labelledby="implementation-tab">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-bubblesort-tab" data-toggle="tab"
+                       href="#implementation-bubblesort"
+                       role="tab">Сортировка пузырьком</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-selectionsort-tab" data-toggle="tab"
+                       href="#implementation-selectionsort"
+                       role="tab">Сортировка выбором</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-insertionsort-tab" data-toggle="tab"
+                       href="#implementation-insertionsort"
+                       role="tab">Сортировка вставками</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-mergesort-tab" data-toggle="tab"
+                       href="#implementation-mergesort" role="tab">Сортировка слиянием</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="implementation-quicksort-tab" data-toggle="tab"
+                       href="#implementation-quicksort" role="tab">Быстрая
+                        сортировка</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" id="implementation-bubblesort" role="tabpanel">6</div>
+                <div class="tab-pane fade" id="implementation-selectionsort" role="tabpanel">7</div>
+                <div class="tab-pane fade" id="implementation-insertionsort" role="tabpanel">8</div>
+                <div class="tab-pane fade" id="implementation-mergesort" role="tabpanel">9</div>
+                <div class="tab-pane fade" id="implementation-quicksort" role="tabpanel">10</div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
+            <div class="row">
+                <div class="col-xs-3 form-inline">
+                    <div class="form-group mb-3">
+                        <label for="array-size">Размер массива</label>
+                        <input id="array-size" class="form-control mx-sm-3" type="number" value="100"/>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="algo-select">Алгоритм</label>
+                        <select class="form-control mx-sm-3" id="algo-select">
+                            <option value="bubblesort">Сортировка пузырьком</option>
+                            <option value="selectionsort">Сортировка выбором</option>
+                            <option value="insertionsort">Сортировка вставками</option>
+                            <option value="mergesort">Сортировка слиянием</option>
+                            <option value="quicksort">Быстрая сортировка</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="init-select">Инициализция массива</label>
+                        <select class="form-control mx-sm-3" id="init-select">
+                            <option value="random">Случайные элементы</option>
+                            <option value="sorted">Сортированный</option>
+                            <option value="reversed">Перевернутый</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3" id="pivot-select-div">
+                        <label for="pivot-select">Опорный элемент</label>
+                        <select class="form-control mx-sm-3" id="pivot-select">
+                            <option value="random">Случайный</option>
+                            <option value="first">Первый</option>
+                            <option value="middle">По середине</option>
+                            <option value="last">Последний</option>
+                            <option value="median3">Медиана трёх</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="interval">Интервал (мс)</label>
+                        <input id="interval" class="form-control mx-sm-3" type="number" value="10"
+                               aria-describedby="helpInline"/>
+                        <small id="helpInline" class="text-muted">
+                            Сравнения <span class="compare">синие</span>, перестановки <span class="swap">красные</span>
+                        </small>
+                    </div>
+                    <div class="start-btn-block">
+                        <button class="btn btn-lg btn-primary btn-block" id="start-btn">Начать</button>
+                    </div>
+                </div>
+                <div class="col-xs-9 canvas-block" id="canvas-div">
+                    <canvas width="1000px" height="300px" id="main-canvas">
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <script>
@@ -90,6 +190,8 @@
         update_pivot_select();
         $("#algo-select").change(update_pivot_select);
         $("#start-btn").click(function () {
+            resize_canvas();
+
             if (aa !== null) aa.cancel();
             let n = parseInt($("#array-size").val());
             const interval = parseInt($("#interval").val());

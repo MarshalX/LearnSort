@@ -6,3 +6,12 @@
     font-weight: bold;
     color: #F00;
 }
+
+.start-btn-block {
+    display: contents;
+}
+
+.canvas-block {
+    width: 100%;
+    height: 100%;
+}
