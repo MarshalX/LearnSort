@@ -26,10 +26,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab">Главная</a>
+                    <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab">О приложении</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="theory-tab" data-toggle="tab" href="#theory" role="tab">Теория</a>
+                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab">Сортировки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="theory-tab" data-toggle="tab" href="#theory" role="tab">Алгоритмы
+                        сортировки</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="implementation-tab" data-toggle="tab" href="#implementation" role="tab">Реализация</a>
@@ -38,10 +42,7 @@
                     <a class="nav-link" id="visualization-tab" data-toggle="tab" href="#visualization" role="tab">Визуализация</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="testing-tab" data-toggle="tab" href="#testing" role="tab">Тестирование</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab">О проекте</a>
+                    <a class="nav-link" id="testing-tab" data-toggle="tab" href="#testing" role="tab">Самоконтроль</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="about-dev-tab" data-toggle="tab" href="#about-dev" role="tab">О
@@ -51,17 +52,16 @@
             <ul class="nav" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link btn btn-success my-2 my-sm-0 active" id="search-tab" data-toggle="tab"
-                       href="#search" role="tab" onclick="$('#search-tab').removeClass('active');">Поиск</a>
+                       href="#search" role="tab" onclick="$('#search-tab').removeClass('active');">Найти в Интернете</a>
                 </li>
             </ul>
-
         </div>
     </nav>
 </header>
 
 <div class="container">
     <div class="tab-content" id="mainTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
             <h2>Методы сортировки</h2>
             <hr>
             <p>В любой сфере деятельности, которая использует компьютер для записи, обработки и сохранения информации,
@@ -620,7 +620,7 @@
             </div>
         </div>
         <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
-            <h2>Поиск</h2>
+            <h2>Найти в Интернете</h2>
             <hr>
             <div class="ya-site-form ya-site-form_inited_no"
                  data-bem="{&quot;action&quot;:&quot;https://yandex.ru/search/site/&quot;,&quot;arrow&quot;:true,&quot;bg&quot;:&quot;#ffcc00&quot;,&quot;fontsize&quot;:12,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Yandex Site Search #2361595&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:2,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2361595,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;&quot;,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#7f9db9&quot;}">
@@ -650,61 +650,83 @@
             })(window, document, 'yandex_site_callbacks');</script>
         </div>
         <div class="tab-pane fade" id="testing" role="tabpanel" aria-labelledby="testing-tab">
-            <h2>Тесты</h2>
+            <h2>Самоконтроль</h2>
+            <p>Информационные технологии сегодня играют исключительно важную роль в обеспечении информационного
+                взаимодействия между людьми, а также в системах подготовки и распространения массовой информации.
+                Поэтому очень важно заниматься саморазвитием, составной частью которого является самоконтроль.</p>
             <hr>
-            <b>Классы алгоритмов сортировки:</b>
-            <a href="https://learningapps.org/view8020649">https://learningapps.org/view8020649</a>
-            <br>
-            <b>Оценки алгоритмов сортировки:</b>
-            <a href="https://learningapps.org/view8019789">https://learningapps.org/view8019789</a>
-            <br>
-            <b>Классификация алгоритмов сортировки:</b>
-            <a href="https://learningapps.org/view8020031">https://learningapps.org/view8020031</a>
-            <br>
-            <b>Классификация алгоритмов по сфере применения:</b>
-            <a href="https://learningapps.org/view8020169">https://learningapps.org/view8020169</a>
-            <br>
-            <b>Алгоритм сортировки выбором:</b>
-            <a href="https://learningapps.org/view8020500">https://learningapps.org/view8020500</a>
-            <br>
-            <b>Алгоритм сортировки слиянием:</b>
-            <a href="https://learningapps.org/view8020451">https://learningapps.org/view8020451</a>
-            <br>
-            <b>Алгоритм быстрой сортировки:</b>
-            <a href="https://learningapps.org/view8020384">https://learningapps.org/view8020384</a>
-            <br>
-            <b>Достоинства и недостатки алгоритма сортировки слиянием:</b>
-            <a href="https://learningapps.org/view8019478">https://learningapps.org/view8019478</a>
-            <br>
-            <b>Достоинства и недостатки алгоритма быстрой сортировки:</b>
-            <a href="https://learningapps.org/view8020712">https://learningapps.org/view8020712</a>
+            <p><b>Тестовые задания</b> для контроля знаний по классификациям алгоритмов сортировки:</p>
+            <ul>
+                <li>
+                    <a href="https://learningapps.org/view8020649" class="test-btn">Классы алгоритмов
+                        сортировки</a></li>
+                <li>
+                    <a href="https://learningapps.org/view8019789" class="test-btn">Оценки алгоритмов сортировки</a>
+                </li>
+                <li>
+                    <a href="https://learningapps.org/view8020031" class="test-btn">Классификация алгоритмов
+                        сортировки</a></li>
+                <li>
+                    <a href="https://learningapps.org/view8020169" class="test-btn">Классификация алгоритмов по сфере
+                        применения</a>
+                </li>
+            </ul>
+            <p><b>Тестовые задания</b> для контроля знаний алгоритмов сортировки:</p>
+            <ul>
+                <li>
+                    <a href="https://learningapps.org/view8020500" class="test-btn">Алгоритм сортировки выбором</a></li>
+                <li>
+                    <a href="https://learningapps.org/view8020451" class="test-btn">Алгоритм сортировки слиянием</a>
+                </li>
+                <li>
+                    <a href="https://learningapps.org/view8020384" class="test-btn">Алгоритм быстрой сортировки</a></li>
+                <li>
+                    <a href="https://learningapps.org/view8019478" class="test-btn">Достоинства и недостатки алгоритма
+                        сортировки слиянием</a></li>
+                <li>
+                    <a href="https://learningapps.org/view8020712" class="test-btn">Достоинства и недостатки алгоритма
+                        быстрой сортировки</a>
+                </li>
+            </ul>
         </div>
-        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
-            <h2>О проекте</h2>
+        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h2>О приложении</h2>
             <hr>
-            <p>Приложение LearnSort разработано с целью повышения качества усвоения учебного материала о методах
-                внутренних сортировки, их алгоритмах, программных реализаций на различных информационных
-                технологиях.</p>
+            <p>Сортировку следует понимать, как процесс перегруппировки заданного множества объектов в некотором
+                определенном порядке.</p>
+            <p>Цель сортировки – облегчить последующий поиск элементов в таком отсортированном множестве.</p>
+            <p>Мы встречаемся с отсортированными объектами в телефонных книгах, в списках подоходных налогов, в
+                оглавлениях книг, в библиотеках, в словарях, на складах – почти везде, где нужно искать хранимые
+                объекты. Даже малышей учат держать свои вещи «в порядке», и они уже сталкиваются с некоторыми видами
+                сортировок задолго до того, как познакомятся с азами арифметики.</p>
+
+            <br>
+
+            <p>Приложение LearnSort разработано с целью саморазвития и углубленного изучения алгоритмов сортировки.</p>
             <p>Приложение рассчитано на широкий круг пользователей, заинтересованных в изучении и систематизации своих
                 знаний в области методов внутренней сортировки. В приложении систематизирована и сгруппирована
                 информация по пяти методам внутренней сортировки: сортировка пузырьком, сортировка выбором, сортировка
                 вставками, сортировка слиянием и быстрая сортировка.</p>
-            <p>Приложение имеет блочную структуру и состоит из главного, теоретического разделов, разделов реализации,
-                визуализации методов, раздела тестирования и информации о проекте, разработчиках.</p>
-            <p>На главной странице приложения расположена информация о сортировке, алгоритмах сортировки, их
+            <p>Приложение может использоваться на уроках информатики в школе, факультативных занятиях, а также для
+                профессиональной подготовки специалистов в области информационных технологий, изучая материал от
+                простого к сложному.</p>
+            <p>Приложение имеет блочную структуру и состоит из модулей: О приложении, Сортировки, Алгоритмы сортировки;
+                Реализация, Визуализация, Самоконтроль и О разработчиках.</p>
+            <p>Модуль Сортировка содержит информацию о сортировке, их классах, алгоритмах сортировки, их
                 классификации.</p>
-            <p>Теоретический раздел состоит из пяти вкладок по методам внутренней сортировки пузырьком, сортировки
-                выбором, сортировки вставками, сортировки слиянием и быстрой сортировки, которые имеют однотипную
-                структуру. Каждая вкладка состоит из видеоматериала, описания метода сортировки и алгоритма.</p>
-            <p>Раздел реализации содержит реализацию на псевдокоде и на других языках программирования по методам
-                внутренней сортировки пузырьком, сортировки выбором, сортировки вставками, сортировки слиянием и быстрой
-                сортировки.</p>
-            <p>В разделе визуализации приведены примеры программной реализации методов внутренней сортировки пузырьком,
-                сортировки выбором, сортировки вставками, сортировки слиянием и быстрой сортировки, с возможностью
-                изменения размера массива, инициализации массива, наличием или отсутствием отрицательных чисел,
-                интервале визуальной задержки отображения графической информации, а для быстрой сортировки имеется
-                возможность выбора опорного элемента сортировки.</p>
-            <p>Раздел тестирования разработан для самоконтроля усвоения учебного материала.</p>
+            <p>Модуль Алгоритмы сортировки состоит из пяти вкладок по сортировкам: Сортировка пузырьком, Сортировка
+                выбором, Сортировка вставками, Сортировка слиянием и Быстрая сортировка, которые имеют однотипную
+                структуру. Каждая вкладка состоит из описания метода сортировки, алгоритма и видеоматериала (создан в
+                университете Сапиентия, Тыргу-Муреш (Marosvásárhely), Румыния).</p>
+            <p>Модуль Реализация содержит реализацию алогритмов сортировки на учебном языке программирования Паскаль и в
+                других средах разработки.</p>
+            <p>В модуле Визуализация приведены примеры программной реализации методов внутренней сортировки, с
+                возможностью изменения размера массива, инициализации массива, наличием или отсутствием отрицательных
+                чисел, интервале визуальной задержки отображения графической информации, а для быстрой сортировки
+                имеется возможность выбора опорного элемента сортировки.</p>
+            <p>Модуль Самоконтроль содержит on-line тесты разработанные и опубликованные в приложении learningapps.org.
+                Одна из главных задач воспитания подрастающего поколения – это формирование самостоятельности мышления,
+                подготовка к творческой деятельности, это требование времени, это социальная задача.</p>
 
             <br>
 
@@ -718,22 +740,50 @@
                 лицензией MIT, разрешающей использовать её как в коммерческих, так и в обучающих целях (<a
                         href="https://ru.wikipedia.org/wiki/Лицензия_MIT">https://ru.wikipedia.org/wiki/Лицензия_MIT</a>).
             </p>
+            <p>Для наполнения приложения учебным материалом использовались учебные пособия по языкам программирования,
+                информационным технологиям, словари и личный опыт преподавателя.</p>
         </div>
         <div class="tab-pane fade" id="about-dev" role="tabpanel" aria-labelledby="about-dev-tab">
             <h2>О разработчиках</h2>
-            <hr>
-            <p><b>Платонова Тамара Юрьевна</b> – руководитель.</p>
-            <p>Место работы: Учреждения образования «Новопольский государственный аграрно-экономический колледж»,
-                преподаватель 1-ой категории.</p>
-            <p><b>Семёнов Илья Сергеевич</b> – разработчик приложения LearnSort.</p>
-            <p>Место учёбы: Учреждения образования «Новопольский государственный аграрно-экономический колледж»,
-                учащийся 4-го курса специальности 2-40 01 01 «Программное обеспечение информационных технологий».</p>
+            <div class="card-deck">
+                <div class="card">
+                    <img src="img/platonova.jpg" class="card-img-top" alt="Платонова Тамара Юрьевна">
+                    <div class="card-body">
+                        <h5 class="card-title">Платонова Тамара Юрьевна</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Руководитель</h6>
+                        <p class="card-text">Место работы: Учреждения образования «Новопольский государственный
+                            аграрно-экономический колледж», преподаватель 1-ой категории.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="http://platonova.ngaek.by" class="btn btn-primary btn-block">platonova.ngaek.by</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/semyonov.jpg" class="card-img-top" alt="Семёнов Илья Сергеевич">
+                    <div class="card-body">
+                        <h5 class="card-title">Семёнов Илья Сергеевич</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Разработчик приложения LearnSort</h6>
+                        <p class="card-text">Место учёбы: Учреждения образования «Новопольский государственный
+                            аграрно-экономический колледж», учащийся 4-го курса специальности 2-40 01 01 «Программное
+                            обеспечение информационных технологий».</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://marshal.by/" class="btn btn-primary btn-block">marshal.by</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
 
 <script>
+    $(".test-btn").click((e) => {
+        console.log(e);
+        window.open(e.currentTarget.attributes.href.nodeValue, 'LearnSort', 'width=800, height=600');
+        e.preventDefault();
+    });
+
     $('a').on('show.bs.tab', (e) => {
         $('.embed-responsive-item').each(function () {
             $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
